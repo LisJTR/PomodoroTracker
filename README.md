@@ -19,8 +19,8 @@ Aplicación web tipo Pomodoro para registrar sesiones de concentración por cate
   
   ##### Estructura inicial
   
-    ![Wireframe](docs/mvp-wireframe.jpg)
+    ![Wireframe](docs/MVP1.jpg)
     
   ##### Base de datos (diagrama ER)
   
-    ![Diagrama ER](docs/er-diagram.jpg)
+    ![Diagrama ER](docs/BBDD_MVP1.jpg)
