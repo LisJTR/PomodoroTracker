@@ -9,7 +9,7 @@ Aplicación web tipo Pomodoro para registrar sesiones de concentración por cate
     - Crear y listar clasificaciones (categorías)
     - Guardar sesiones Pomodoro completadas (usuario de prueba: user-1)
     
-  ### Tecnologías
+  #### Tecnologías
   
     - Backend: Java, Spring Boot, Maven, JPA, JUnit
     - Base de datos: SQL Server (local / Docker)
@@ -17,10 +17,10 @@ Aplicación web tipo Pomodoro para registrar sesiones de concentración por cate
     
   #### Diseño (borrador)
   
-  #### Estructura inicial
+  ##### Estructura inicial
   
     ![Wireframe](docs/mvp-wireframe.jpg)
     
-  #### Base de datos (diagrama ER)
+  ##### Base de datos (diagrama ER)
   
     ![Diagrama ER](docs/er-diagram.jpg)
