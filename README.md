@@ -12,7 +12,7 @@ Aplicación web tipo Pomodoro para registrar sesiones de concentración por cate
 ## Tecnologías
 
 - Backend: Java, Spring Boot, Maven, Docker, JPA, JUnit
-- Base de datos: SQL Server (local / Docker)
+- Base de datos: MySQL (local / Docker)
 - Frontend: HTML, CSS y JavaScript
 
 ## Diseño (borrador)
