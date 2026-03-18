@@ -33,10 +33,10 @@ public class SessionServiceImplTest {
 	void shouldStartSession() {
 		
 		SessionPomodoro sessionPomodoro = new SessionPomodoro();
-		sessionPomodoro.setFocusMinutesSelected(2L);
-		sessionPomodoro.setBreakMinutesSelected(10L);
-		sessionPomodoro.setStartedAt(LocalDateTime.now());
-		sessionPomodoro.setCyclesSelected(2L);
+		sessionPomodoro.setMinutosSeleccionados(2L);
+		sessionPomodoro.setMinutosDescanso(10L);
+		sessionPomodoro.setStarted(LocalDateTime.now());
+		sessionPomodoro.setCiclosSeleccionados(2L);
 		
 		when(sessionRepositoryFalse.save(sessionPomodoro)).thenReturn(sessionPomodoro);
 		
@@ -53,7 +53,7 @@ public class SessionServiceImplTest {
 	    SessionPomodoro sessionPomodoro = new SessionPomodoro();
 	    sessionPomodoro.setId(id);
 
-	    sessionPomodoro.setStartedAt(LocalDateTime.now().minusMinutes(25));
+	    sessionPomodoro.setStarted(LocalDateTime.now().minusMinutes(25));
 
 	    when(sessionRepositoryFalse.findById(id)).thenReturn(Optional.of(sessionPomodoro));
 
@@ -62,8 +62,8 @@ public class SessionServiceImplTest {
 
 	    SessionPomodoro realSession = sessionService.endSession(id);
 
-	    assertNotNull(realSession.getEndedAt());
-	    assertNotNull(realSession.getTotalDurationMinutes());
+	    assertNotNull(realSession.getEnded());
+	    assertNotNull(realSession.getTotalDuracion());
 
 	    verify(sessionRepositoryFalse).findById(id);
 	    verify(sessionRepositoryFalse).save(sessionPomodoro);
@@ -73,16 +73,16 @@ public class SessionServiceImplTest {
 	void shouldGetAllSessions() {
 		
 		SessionPomodoro sessionPomodoro1 = new SessionPomodoro();
-		sessionPomodoro1.setFocusMinutesSelected(2L);
-		sessionPomodoro1.setBreakMinutesSelected(10L);
-		sessionPomodoro1.setStartedAt(LocalDateTime.now());
-		sessionPomodoro1.setCyclesSelected(2L);
+		sessionPomodoro1.setMinutosSeleccionados(2L);
+		sessionPomodoro1.setMinutosDescanso(10L);
+		sessionPomodoro1.setStarted(LocalDateTime.now());
+		sessionPomodoro1.setCiclosSeleccionados(2L);
 		
 		SessionPomodoro sessionPomodoro2 = new SessionPomodoro();
-		sessionPomodoro2.setFocusMinutesSelected(1L);
-		sessionPomodoro2.setBreakMinutesSelected(15L);
-		sessionPomodoro2.setStartedAt(LocalDateTime.now());
-		sessionPomodoro2.setCyclesSelected(3L);
+		sessionPomodoro2.setMinutosSeleccionados(1L);
+		sessionPomodoro2.setMinutosDescanso(15L);
+		sessionPomodoro2.setStarted(LocalDateTime.now());
+		sessionPomodoro2.setCiclosSeleccionados(3L);
 		
 		List<SessionPomodoro> sessions = List.of(sessionPomodoro1, sessionPomodoro2);
 		

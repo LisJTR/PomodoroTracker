@@ -18,23 +18,23 @@ public class SessionPomodoro {
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 
-    @Column(name = "focus_minutes_selected", nullable = false)
-    private Long focusMinutesSelected;
+    @Column(name = "minutos_seleccionados", nullable = false)
+    private Long minutosSeleccionados;
 
-    @Column(name = "break_minutes_selected", nullable = false)
-    private Long breakMinutesSelected;
+    @Column(name = "minutos_descanso", nullable = false)
+    private Long minutosDescanso;
 
-    @Column(name = "started_at", nullable = false)
-    private LocalDateTime startedAt;
+    @Column(name = "started", nullable = false)
+    private LocalDateTime started;
 
-    @Column(name = "ended_at")
-    private LocalDateTime endedAt;
+    @Column(name = "ended")
+    private LocalDateTime ended;
 
-    @Column(name = "total_duration_minutes")
-    private Long totalDurationMinutes;
+    @Column(name = "total_duration")
+    private Long totalDuracion;
 
-    @Column(name = "cycles_selected")
-    private Long cyclesSelected;
+    @Column(name = "ciclos_seleccionados")
+    private Long ciclosSeleccionados;
 
     public SessionPomodoro() {
     	
@@ -42,7 +42,7 @@ public class SessionPomodoro {
 
     @PrePersist
     protected void onCreate() {
-        this.startedAt = LocalDateTime.now();
+        this.started = LocalDateTime.now();
     }
 
 	public Long getId() {
@@ -61,53 +61,55 @@ public class SessionPomodoro {
 		this.category = category;
 	}
 
-	public Long getFocusMinutesSelected() {
-		return focusMinutesSelected;
+	public Long getMinutosSeleccionados() {
+		return minutosSeleccionados;
 	}
 
-	public void setFocusMinutesSelected(Long focusMinutesSelected) {
-		this.focusMinutesSelected = focusMinutesSelected;
+	public void setMinutosSeleccionados(Long minutosSeleccionados) {
+		this.minutosSeleccionados = minutosSeleccionados;
 	}
 
-	public Long getBreakMinutesSelected() {
-		return breakMinutesSelected;
+	public Long getMinutosDescanso() {
+		return minutosDescanso;
 	}
 
-	public void setBreakMinutesSelected(Long breakMinutesSelected) {
-		this.breakMinutesSelected = breakMinutesSelected;
+	public void setMinutosDescanso(Long minutosDescanso) {
+		this.minutosDescanso = minutosDescanso;
 	}
 
-	public LocalDateTime getStartedAt() {
-		return startedAt;
+	public LocalDateTime getStarted() {
+		return started;
 	}
 
-	public void setStartedAt(LocalDateTime startedAt) {
-		this.startedAt = startedAt;
+	public void setStarted(LocalDateTime started) {
+		this.started = started;
 	}
 
-	public LocalDateTime getEndedAt() {
-		return endedAt;
+	public LocalDateTime getEnded() {
+		return ended;
 	}
 
-	public void setEndedAt(LocalDateTime endedAt) {
-		this.endedAt = endedAt;
+	public void setEnded(LocalDateTime ended) {
+		this.ended = ended;
 	}
 
-	public Long getTotalDurationMinutes() {
-		return totalDurationMinutes;
+	public Long getTotalDuracion() {
+		return totalDuracion;
 	}
 
-	public void setTotalDurationMinutes(Long totalDurationMinutes) {
-		this.totalDurationMinutes = totalDurationMinutes;
+	public void setTotalDuracion(Long totalDuracion) {
+		this.totalDuracion = totalDuracion;
 	}
 
-	public Long getCyclesSelected() {
-		return cyclesSelected;
+	public Long getCiclosSeleccionados() {
+		return ciclosSeleccionados;
 	}
 
-	public void setCyclesSelected(Long cyclesSelected) {
-		this.cyclesSelected = cyclesSelected;
+	public void setCiclosSeleccionados(Long ciclosSeleccionados) {
+		this.ciclosSeleccionados = ciclosSeleccionados;
 	}
+
+	
 
     
   

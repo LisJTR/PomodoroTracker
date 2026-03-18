@@ -34,11 +34,11 @@ public class SessionsServiceImpl implements SessionsService{
 				.orElseThrow(() -> new RuntimeException("Session no encontrada"));
 				
 				LocalDateTime endTime = LocalDateTime.now();
-				existingSession.setEndedAt(endTime);
+				existingSession.setEnded(endTime);
 				
 				Long durationMinutes = 
-						ChronoUnit.MINUTES.between(existingSession.getStartedAt(), endTime);
-				existingSession.setTotalDurationMinutes(durationMinutes);
+						ChronoUnit.MINUTES.between(existingSession.getStarted(), endTime);
+				existingSession.setTotalDuracion(durationMinutes);
 		
 		return sessionRepository.save(existingSession);
 	}

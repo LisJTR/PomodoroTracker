@@ -19,12 +19,12 @@ public class Category {
 	@JoinColumn(name="user_id", nullable = false)
 	private User user;
 	
-	@Column(name="created_at", nullable = false)
-	private LocalDateTime createdAt;
+	@Column(name="fecha_creacion", nullable = false)
+	private LocalDateTime fechaCreacion;
 	
 	@PrePersist
 	protected void onCreate() {
-		this.createdAt = LocalDateTime.now();
+		this.fechaCreacion = LocalDateTime.now();
 	}
 	
 	public Category() {
@@ -62,17 +62,17 @@ public class Category {
 		this.user = user;
 	}
 
-	public LocalDateTime getCreatedAt() {
-		return createdAt;
+	public LocalDateTime getFechaCreacion() {
+		return fechaCreacion;
 	}
 
-	public void setCreatedAt(LocalDateTime createdAt) {
-		this.createdAt = createdAt;
+	public void setFechaCreacion(LocalDateTime fechaCreacion) {
+		this.fechaCreacion = fechaCreacion;
 	}
 
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", nombre=" + nombre + ", user=" + user + ", createdAt=" + createdAt + "]";
+		return "Category [id=" + id + ", nombre=" + nombre + ", user=" + user + ", createdAt=" + fechaCreacion + "]";
 	}
 
 	
