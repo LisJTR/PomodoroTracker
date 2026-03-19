@@ -6,14 +6,16 @@ Aplicación web tipo Pomodoro para registrar sesiones de concentración por cate
 
 - Temporizador Pomodoro (iniciar / pausar / reiniciar)
 - Establecer tiempo de concentración
-- Crear y listar clasificaciones (categorías)
-- Guardar sesiones Pomodoro completadas (usuario de prueba: user-1)
+- Crear y listar categorías
+- Guardar sesiones Pomodoro completadas
 
 ## Tecnologías
 
-- Backend: Java, Spring Boot, Maven, Docker, JPA, JUnit
-- Base de datos: MySQL (local / Docker)
+- Backend: Java, Spring Boot, Maven, JPA/Hibernate
+- Testing: JUnit y Mockito
+- Base de datos: MySQL
 - Frontend: HTML, CSS y JavaScript
+- Dockerización: BD y APP
 
 ## Diseño (borrador)
 
@@ -21,4 +23,4 @@ Aplicación web tipo Pomodoro para registrar sesiones de concentración por cate
 ![Wireframe](docs/MVP1.png)
 
 ### Base de datos (diagrama ER)
-![Diagrama ER](docs/BBDD_MVP1.png)
+![Diagrama ER](docs/BD-MVP1.png)
